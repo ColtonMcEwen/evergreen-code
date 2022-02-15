@@ -11,6 +11,7 @@ const PostCard = ({ post }) => {
                 <Image
                     src={post.featuredImage.url}
                     alt={post.title}
+                    layout='fill'
                     className="object-top absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
                 />
             </div>
@@ -21,8 +22,8 @@ const PostCard = ({ post }) => {
                 <div className="flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8">
                     <Image
                         alt={post.author.name}
-                        height="30px"
-                        width="30px"
+                        height={30}
+                        width={30}
                         className="align-middle rounded-full"
                         src={post.author.photo.url}
                     />
