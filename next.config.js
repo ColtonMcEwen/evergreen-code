@@ -4,3 +4,4 @@ module.exports = {
     domains: ["media.graphcms.com"]
   }
 }
+
