@@ -60,27 +60,16 @@ const PostDetail = ({ post }) => {
 
     return (
         <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
-            <div className="relative overflow-hidden shadow-md mb-6">
-                <img
+            <div className="relative overflow-hidden shadow-md pb-80 mb-6">
+                <Image
                     src={post.featuredImage.url}
                     alt={post.title}
+                    layout='fill'
                     className="object-top h-full w-full rounded-t-lg"
                 />
             </div>
             <div className="px-4 lg:px-0">
                 <div className="flex items-center mb-8 w-full">
-                    <div className="flex items-center mb-4 lg:mb-0 w-full lg:w-auto mr-8">
-                        <Image
-                            alt={post.author.name}
-                            height={30}
-                            width={30}
-                            className="align-middle rounded-full"
-                            src={post.author.photo.url}
-                        />
-                        <p className="inline align-middle text-gray-700 ml-2 text-lg">
-                            {post.author.name}
-                        </p>
-                    </div>
                     <div className="font-medium text-gray-700">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

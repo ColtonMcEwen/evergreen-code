@@ -11,6 +11,7 @@ import {
     CommentsForm,
     Loader,
 } from '../../components';
+import { AdjacentPosts } from '../../sections';
 
 const PostDetails = ({ post }) => {
     const router = useRouter();
@@ -25,6 +26,7 @@ const PostDetails = ({ post }) => {
                 <div className="col-span-1 lg:col-span-8">
                     <PostDetail post={post} />
                     <Author author={post.author} />
+                    <AdjacentPosts slug={post.slug} createdAt={post.createdAt} />
                     <CommentsForm slug={post.slug} />
                     <Comments slug={post.slug} />
                 </div>
@@ -40,7 +42,6 @@ const PostDetails = ({ post }) => {
                     </div>
                 </div>
             </div>
-            PostDetails
         </div>
     );
 };
